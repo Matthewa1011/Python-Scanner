@@ -10,7 +10,7 @@ else:
         print("Invalid amount of arguments.")
         print("Sytax: python3 scanner.py <ip>")
 
-#Add a banner
+#Adds a Banner
 print("-" * 50)
 print("Scanning target " + target)
 print("Time started: " + str(datetime.now()))
@@ -20,7 +20,6 @@ try:
                 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                 socket.setdefaulttimeout(1)
                 result = s.connect_ex((target,port)) #returns an error indicator
-                #print("Checking port {}".format(port))
                 if result == 0: 
                         print("Port {} is open".format(port))
 
